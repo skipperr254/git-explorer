@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## React Router
+The react-router-dom package is in use in theis project.
+The BrowserRouter is first imported in the index.js and then used to wrap the <App /> component.
+
+The Route component is used to specify which component to render based on the URL that matches the path.
+It takes two props:
+    path: the path to match
+    element: the component to render if the path is mathed
+
+The Routes component helps render a single route exclusively by wrapping multiple Route components within it.
+    If no match is found, a default NotFound component can be rendered.
+
+Link --> a react router component that allows navigation between pages/vews without reloading/refereshing the application
+
+The Outlet component from React Router allows to map child components inside of a Route component. Useful, for example, for a Navbar placement inside an app.
