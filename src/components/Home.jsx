@@ -16,7 +16,7 @@ const Home = () => {
         <div className="users-cont">
             {
                 repos ? repos.map(repo => (
-                    <div className="user-card-cont">
+                    <div key={repo.id} className="user-card-cont">
                         <img
                             src={repo.owner.avatar_url}
                             alt="userAvatar"

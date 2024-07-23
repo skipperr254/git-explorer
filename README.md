@@ -85,3 +85,5 @@ The Routes component helps render a single route exclusively by wrapping multipl
 Link --> a react router component that allows navigation between pages/vews without reloading/refereshing the application
 
 The Outlet component from React Router allows to map child components inside of a Route component. Useful, for example, for a Navbar placement inside an app.
+
+The Route component allows for definition of dynamic segments that can be extracted from the URL and be used in the application (dynamic routing).

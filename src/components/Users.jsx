@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 import React from 'react'
@@ -31,7 +32,7 @@ const Users = () => {
                                 className="user-avatar"
                             />
                             <span className="username">{user.login}</span>
-                            <button className="view-btn">View User</button>
+                            <Link to={`/users/user/${user.login}`} className="view-btn">View User</Link>
                         </div>
                     )) :
                         (
