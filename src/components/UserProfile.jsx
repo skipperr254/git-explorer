@@ -10,7 +10,7 @@ const UserProfile = () => {
     useEffect(() => {
         const getGitUserData = async () => {
             const response = await axios.get(`https://api.github.com/users/${username}`);
-            console.log(response.data)
+            // console.log(response.data)
             setGitUserData(response.data);
         }
         getGitUserData().catch(e => console.log(e));

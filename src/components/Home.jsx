@@ -27,9 +27,7 @@ const Home = () => {
                         <div>
                             By: <button className="repo-owner">{repo.owner.login}</button>
                         </div>
-                        <button>
-                            <button>View Repo</button>
-                        </button>
+                        <button>View Repo</button>
                     </div>
                 )) :
                     (

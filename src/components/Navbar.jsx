@@ -11,6 +11,7 @@ const Navbar = () => {
                 <div className="link-cont">
                     <Link to="/">Repos</Link>
                     <Link to="/users">Users</Link>
+                    <Link to="/search">Search Users</Link>
                 </div>
             </nav>
             <Outlet />
