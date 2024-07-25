@@ -87,3 +87,7 @@ Link --> a react router component that allows navigation between pages/vews with
 The Outlet component from React Router allows to map child components inside of a Route component. Useful, for example, for a Navbar placement inside an app.
 
 The Route component allows for definition of dynamic segments that can be extracted from the URL and be used in the application (dynamic routing).
+
+Route Guards in the context of React Router refers to a mechanism that allows the control of access to routes based on specific set rules or conditions.
+
+They are used to protect certain routed and ensure users meet certain criterion before they are able to access them.

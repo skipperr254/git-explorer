@@ -14,7 +14,7 @@ const UserProfile = () => {
             setGitUserData(response.data);
         }
         getGitUserData().catch(e => console.log(e));
-    }, [])
+    }, [username])
 
     return (
         <div className="user-profile-main-content">

@@ -12,7 +12,7 @@ const SearchUser = () => {
 
     const handleGetUser = async () => {
         const response = await axios.get(`https://api.github.com/users/${username}`);
-        if (response.status == 200) {
+        if (response.status === 200) {
             // redirect
             navigate(`/users/user/${username}`);
         }
