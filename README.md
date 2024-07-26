@@ -99,3 +99,4 @@ You can use:
 
 ## Lazy Loading
 A design pattern that allows you to load only specific components in your application to reduce initial load time.
+Use the React Suspense component to display something before the different components are lazily loaded.

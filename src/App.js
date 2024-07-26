@@ -1,17 +1,10 @@
 import './App.css';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { useState, lazy, Suspense } from 'react';
+import { useState, Suspense } from 'react';
 
-import Home from './components/Home';
 import Navbar from './components/Navbar';
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
-
-const Users = lazy(() => import('./components/Users'));
-const NotFound = lazy(() => import('./components/NotFound'));
-const UserProfile = lazy(() => import('./components/UserProfile'));
-const SearchUser = lazy(() => import('./components/SearchUser'));
-const Login = lazy(() => import('./components/Login'));
-const AuthProfile = lazy(() => import('./components/AuthProfile'));
+import { appRoutes } from './routes';
 
 function App() {
   const [username, setUsername] = useState("");
@@ -26,7 +19,31 @@ function App() {
           <CSSTransition key={location.pathname} classNames="fade" timeout={300} unmountOnExit>
             <Suspense fallback={() => <h1>Loading...</h1>}>
               <Routes location={location}>
-                <Route path="/" element={<Home />} />
+
+                {
+                  appRoutes.map(route => {
+                    if (route.requiresAuth && !loggedIn) {
+                      return (
+                        <Route
+                          key={route.path}
+                          exact
+                          path={route.path}
+                          element={<Navigate replace to="/login" />} />
+                      )
+                    } else {
+                      return (
+                        <Route
+                          key={route.path}
+                          exact
+                          path={route.path}
+                          element={<route.component setUsername={setUsername} setIsLoggedIn={setIsLoggedIn} username={username} />}
+                        />
+                      )
+                    }
+                  })
+                }
+
+                {/* <Route path="/" element={<Home />} />
                 <Route path="/users" element={<Users />} />
                 <Route path="/users/user/:username" element={<UserProfile />} />
                 <Route path="/search" element={<SearchUser />} />
@@ -36,7 +53,7 @@ function App() {
                     <Navigate replace to="/login" />
                   )
                 } />
-                <Route path="*" element={<NotFound />} />
+                <Route path="*" element={<NotFound />} /> */}
               </Routes>
             </Suspense>
           </CSSTransition>
