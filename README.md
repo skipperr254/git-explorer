@@ -94,5 +94,8 @@ They are used to protect certain routed and ensure users meet certain criterion 
 
 ## Using animations in React Router for a better user experience
 You can use:
-    [] React transition group --> easy to use and uses pure CSS for animations.
-    [] Framer motion
+    [ ] React transition group --> easy to use and uses pure CSS for animations.
+    [ ] Framer motion
+
+## Lazy Loading
+A design pattern that allows you to load only specific components in your application to reduce initial load time.
