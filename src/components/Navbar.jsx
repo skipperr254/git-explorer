@@ -13,7 +13,7 @@ const Navbar = ({ loggedIn }) => {
                     <Link to="/users">Users</Link>
                     <Link to="/search">Search</Link>
                     {loggedIn || <Link to="/login">Login</Link>}
-                    <Link to="/profile">Profile</Link>
+                    {loggedIn && <Link to="/profile">Profile</Link>}
                 </div>
             </nav>
             <Outlet />

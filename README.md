@@ -91,3 +91,8 @@ The Route component allows for definition of dynamic segments that can be extrac
 Route Guards in the context of React Router refers to a mechanism that allows the control of access to routes based on specific set rules or conditions.
 
 They are used to protect certain routed and ensure users meet certain criterion before they are able to access them.
+
+## Using animations in React Router for a better user experience
+You can use:
+    [] React transition group --> easy to use and uses pure CSS for animations.
+    [] Framer motion
