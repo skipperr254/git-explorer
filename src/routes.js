@@ -7,6 +7,7 @@ const UserProfile = lazy(() => import('./components/UserProfile'));
 const SearchUser = lazy(() => import('./components/SearchUser'));
 const Login = lazy(() => import('./components/Login'));
 const AuthProfile = lazy(() => import('./components/AuthProfile'));
+const Repo = lazy(() => import('./components/Repo'));
 
 export const appRoutes = [
     {
@@ -38,6 +39,11 @@ export const appRoutes = [
         path: "/profile",
         component: AuthProfile,
         requiresAuth: true
+    },
+    {
+        path: "/repo/:username/:name",
+        component: Repo,
+        requiresAuth: false
     },
     {
         path: "*",
